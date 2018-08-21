@@ -13,6 +13,7 @@ public class PasswordFacade {
             amountOfLetters){
         String password = passwordFacade.getPassword(amountOfLetters, type);
         PasswordEntry passEntrt = new PasswordEntry(website,password,login);
+        passEntrt.toString();
         return passEntrt;
     }
 

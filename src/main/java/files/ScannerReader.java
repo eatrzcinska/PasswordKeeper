@@ -19,9 +19,10 @@ class ScannerReader extends AbstractFileReader {
             Scanner scaner = new Scanner(file);
             while (scaner.hasNextLine()){
             list.add(scaner.nextLine());
-                System.out.println(list.get(0));
+           // System.out.println(list.get(0));
             }
         } catch (FileNotFoundException e) {
+            System.out.println("Nie udało się skorzystać ze skanera");
             return list;
         }
 

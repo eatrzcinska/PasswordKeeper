@@ -7,7 +7,7 @@ import java.util.List;
 
 interface FilesReader {
 
-    // funkcja do czytania pliku
+    // funkcja do czytania pliku i zapisywania go w liscie linijka po linijce
     List<String> read (String path) throws IOException;
 
 

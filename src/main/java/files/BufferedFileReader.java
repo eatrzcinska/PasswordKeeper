@@ -17,7 +17,7 @@ class BufferedFileReader extends AbstractFileReader {
             while(line!= null){
                 list.add(line);
                 line = bufferedReader.readLine();
-                System.out.println(list.get(0));
+                //System.out.println(list.get(0));
             }
         } catch (IOException e1) {
             return list;
