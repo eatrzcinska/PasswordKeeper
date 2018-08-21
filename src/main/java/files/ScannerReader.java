@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class ScannerReader extends AbstractFileReader {
+class ScannerReader extends AbstractFileReader {
     @Override
     public List read(String path) {
 

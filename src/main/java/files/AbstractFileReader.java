@@ -9,7 +9,7 @@ import java.util.List;
 
 abstract class AbstractFileReader implements FilesReader {
 
-    protected File getFile(String path) {
+    File getFile(String path) {
 
         if (path == null) {
             throw new IllegalArgumentException("May not be null!");
@@ -37,4 +37,10 @@ abstract class AbstractFileReader implements FilesReader {
         }
         return entryList;
     }
+
+
+    // Metoda read, której nie muszę tu podawać, bo jeśli metoda jest abstrakcyjna to nie trzeba wymieniać tu metody
+    // z interfejsu, klasa dziedzicząca i tak będzie musiała ją nadpisać
+    @Override
+    public abstract List<String> read(String path) throws IOException;
 }

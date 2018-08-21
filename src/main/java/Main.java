@@ -1,5 +1,3 @@
-import files.BufferedFileReader;
-import files.ScannerReader;
 import generator.GeneratorType;
 import model.PasswordFacade;
 /*import generator.GeneratorType;
@@ -25,10 +23,10 @@ public class Main {
         FirstGenerator gener = new FirstGenerator();
         gener.generatePassword(10);*/
 
-        ScannerReader nowy = new ScannerReader();
+       /* ScannerReader nowy = new ScannerReader();
         nowy.read("facebook.txt");
         BufferedFileReader nowy2 = new BufferedFileReader();
-        nowy2.read("facebook.txt");
+        nowy2.read("facebook.txt");*/
 
         PasswordFacade fasadka = new PasswordFacade();
         fasadka.generatePasswordEntry("face","emi", GeneratorType.TYPE1,10);

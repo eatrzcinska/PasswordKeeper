@@ -2,7 +2,7 @@ package generator;
 
 import java.util.Random;
 
-public class Character {
+class Character {
 
     Random random = new Random();
 
