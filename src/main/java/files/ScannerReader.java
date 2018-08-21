@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class LimesFileReader extends AbstractFileReader {
+public class ScannerReader extends AbstractFileReader {
     @Override
     public List read(String path) {
 
@@ -17,6 +17,7 @@ public class LimesFileReader extends AbstractFileReader {
             Scanner scaner = new Scanner(file);
             while (scaner.hasNextLine()){
             list.add(scaner.nextLine());
+                System.out.println(list.get(0));
             }
         } catch (FileNotFoundException e) {
             return list;
