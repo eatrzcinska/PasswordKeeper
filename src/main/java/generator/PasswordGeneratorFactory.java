@@ -4,12 +4,12 @@ import static generator.GeneratorType.TYPE1;
 import static generator.GeneratorType.TYPE2;
 import static generator.GeneratorType.TYPE3;
 
-public class PasswordGeneratorFactory {
+class PasswordGeneratorFactory {
 
     //This factory returns only an object of generator type (class which implements PasswordGenerator interface).
     // You can get password in the facade.
 
-    public PasswordGenerator getGenerator (GeneratorType type){
+    PasswordGenerator getGenerator (GeneratorType type){
         if (type == TYPE1){
             FirstGenerator generator = new FirstGenerator();
             return generator;

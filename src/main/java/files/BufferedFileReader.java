@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BufferedFileReader extends AbstractFileReader {
+class BufferedFileReader extends AbstractFileReader {
     @Override
     public List<String> read(String path) {
 

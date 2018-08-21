@@ -9,7 +9,7 @@ import java.util.List;
 
 abstract class AbstractFileReader implements FilesReader {
 
-    protected File getFile(String path) {
+    File getFile(String path) {
 
         if (path == null) {
             throw new IllegalArgumentException("May not be null!");
@@ -20,9 +20,11 @@ abstract class AbstractFileReader implements FilesReader {
     }
 
 
+
     // Nadpisanie metody z interfejsu - klasa abstrakcyjna nie musi tego robic, mogą to zrobić dopiero klasy
     // dziedziczące po klasie abstrakcyjnej, ale ma taką możliwość (wtedy klasy dziedziczące będą miały taką domyślną
     // implementację tej metody, którą oczywiście mogą nadpisać. Ja tutaj definiouję tę metodę)
+
 
     @Override
     public List<PasswordEntry> getPasswordEntries(String path) throws IOException {
@@ -37,4 +39,10 @@ abstract class AbstractFileReader implements FilesReader {
         }
         return entryList;
     }
+
+
+    // Metoda read, której nie muszę tu podawać, bo jeśli metoda jest abstrakcyjna to nie trzeba wymieniać tu metody
+    // z interfejsu, klasa dziedzicząca i tak będzie musiała ją nadpisać
+    @Override
+    public abstract List<String> read(String path) throws IOException;
 }

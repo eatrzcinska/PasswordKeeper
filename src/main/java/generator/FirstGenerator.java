@@ -6,7 +6,7 @@ import static generator.GeneratorType.TYPE1;
 
 // This class contains generator that accepts uppercase and lowercase letters, numbers and special characters.
 
-public class FirstGenerator implements PasswordGenerator {
+class FirstGenerator implements PasswordGenerator {
 
     Random random = new Random();
 
