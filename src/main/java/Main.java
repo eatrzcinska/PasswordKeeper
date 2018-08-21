@@ -28,6 +28,7 @@ public class Main {
         BufferedFileReader nowy2 = new BufferedFileReader();
         nowy2.read("facebook.txt");*/
 
+
         PasswordFacade fasadka = new PasswordFacade();
         fasadka.generatePasswordEntry("face","emi", GeneratorType.TYPE1,10);
     }

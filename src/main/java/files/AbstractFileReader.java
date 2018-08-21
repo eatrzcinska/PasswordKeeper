@@ -20,9 +20,11 @@ abstract class AbstractFileReader implements FilesReader {
     }
 
 
+
     // Nadpisanie metody z interfejsu - klasa abstrakcyjna nie musi tego robic, mogą to zrobić dopiero klasy
     // dziedziczące po klasie abstrakcyjnej, ale ma taką możliwość (wtedy klasy dziedziczące będą miały taką domyślną
     // implementację tej metody, którą oczywiście mogą nadpisać. Ja tutaj definiouję tę metodę)
+
 
     @Override
     public List<PasswordEntry> getPasswordEntries(String path) throws IOException {

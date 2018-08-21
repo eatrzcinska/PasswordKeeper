@@ -1,5 +1,6 @@
 package files;
 
+
 import model.PasswordEntry;
 
 import java.io.IOException;
@@ -10,7 +11,9 @@ public class FilesFacade {
 
     private FilesReader filesReader;
 
+
     // w fasadzie ustalam na sztywno z jakiego readera ma korzystać
+
     public FilesFacade() {
         filesReader = new ScannerReader();
     }
@@ -37,5 +40,5 @@ public class FilesFacade {
         }
 
     }
-
+  
 }
