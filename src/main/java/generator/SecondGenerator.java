@@ -2,11 +2,11 @@ package generator;
 
 import java.util.Random;
 
-import static generator.GeneratorType.TYPE1;
+import static generator.GeneratorType.TYPE2;
 
-// This class contains generator that accepts uppercase and lowercase letters, numbers and special characters.
+// This class contains generator that accepts uppercase and lowercase letters, numbers.
 
-public class FirstGenerator implements PasswordGenerator {
+class SecondGenerator implements PasswordGenerator {
 
     Random random = new Random();
 
@@ -14,7 +14,7 @@ public class FirstGenerator implements PasswordGenerator {
     public String generatePassword(int amountOfLetters) {
         String password = "";
         for (int i = 0; i < amountOfLetters; i++) {
-            int index = random.nextInt(4);
+            int index = random.nextInt(3);
             char character = 0;
             switch (index) {
                 case 0:
@@ -26,9 +26,6 @@ public class FirstGenerator implements PasswordGenerator {
                 case 2:
                     character = new Character().getNumber();
                     break;
-                case 3:
-                    character = new Character().getCharacter();
-                    break;
             }
             password += character;
         }
@@ -38,7 +35,7 @@ public class FirstGenerator implements PasswordGenerator {
 
     @Override
     public GeneratorType getType() {
-        return TYPE1;               //????
+        return TYPE2;               //????
     }
 }
 
