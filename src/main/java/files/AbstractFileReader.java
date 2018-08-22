@@ -4,10 +4,13 @@ import model.PasswordEntry;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
 abstract class AbstractFileReader implements FilesReader {
+
+    private static String PATH = "C:\\Users\\martr\\IdeaProjects\\PasswordManager\\storage";
 
     File getFile(String path) {
 
@@ -15,8 +18,9 @@ abstract class AbstractFileReader implements FilesReader {
             throw new IllegalArgumentException("May not be null!");
         }
 
-        ClassLoader classLoader = getClass().getClassLoader();
-        return new File(classLoader.getResource(path).getFile());
+        path = PATH +"\\" + path;
+
+        return Paths.get(path).toFile();
     }
 
 

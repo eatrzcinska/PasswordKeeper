@@ -14,7 +14,7 @@ class ScannerReader extends AbstractFileReader {
     public List read(String path) {
 
         List <String> list = new ArrayList<>();
-        File file = new File(path);
+        File file = getFile(path);
         try {
             Scanner scaner = new Scanner(file);
             while (scaner.hasNextLine()){

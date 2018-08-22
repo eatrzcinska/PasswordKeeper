@@ -7,17 +7,20 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.List;
 
 
 class PasswordEntryFileWriter {
 
+    private static String PATH = "C:\\Users\\martr\\IdeaProjects\\PasswordManager\\storage";
+
     void writeToFile(String path, List<PasswordEntry> passwordEnt) {
-        ClassLoader classLoader = getClass().getClassLoader();
+
 
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(path, true);
+            fileWriter = new FileWriter(Paths.get(PATH + "\\" + path).toFile(), true);
         } catch (IOException e) {
             System.out.println("You cannot create a file");
         }

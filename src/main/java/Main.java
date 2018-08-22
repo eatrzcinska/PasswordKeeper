@@ -1,6 +1,7 @@
 import files.FilesFacade;
 import files.LineFileReader;
 import generator.GeneratorType;
+import generator.PasswordGeneratorFacade;
 import model.PasswordEntry;
 import model.PasswordFacade;
 
@@ -45,24 +46,28 @@ public class Main {
         /*PasswordFacade fasadka = new PasswordFacade();
         fasadka.generatePasswordEntry("face","emi", GeneratorType.TYPE1,10);*/
 
-        FilesFacade fasadka = new FilesFacade();
+        FilesFacade filesFacade = new FilesFacade();
 
-        List<String> listOfStrings = fasadka.readFile("facebook.txt");
+        List<String> listOfStrings = filesFacade.readFile("PasswordKeeper.txt");
         System.out.println(listOfStrings.toString()); // domyslna metoda chyba
 
-        List<PasswordEntry> listOfObjects = fasadka.getEntries("facebook.txt");
+        List<PasswordEntry> listOfObjects = filesFacade.getEntries("PasswordKeeper.txt");
         listOfObjects.toString();
 
+        List<PasswordEntry> listaRekordow = new ArrayList<>();
+        PasswordFacade ostateczny = new PasswordFacade();
+        PasswordEntry rekord = ostateczny.generatePasswordEntry(
+                "gmail","login@gmail",GeneratorType.TYPE1,10);
+
+        listaRekordow.add(rekord);
+
+        filesFacade.writeToFile("PasswordKeeper.txt",listaRekordow);
 
 
 
-      /*  List<PasswordEntry> listaRekordow = new ArrayList<>();
 
-        PasswordEntry nowyRekord = new PasswordEntry("google","login","password");
 
-        listaRekordow.add(nowyRekord);
 
-        fasadka.writeToFile("text3.txt",listaRekordow);*/
 
 
     }
