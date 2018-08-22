@@ -30,7 +30,6 @@ public class PasswordEntry {
     public String toString() {
         String information = "Password Entry: website: " + getWebsite()  + ", login: " + getLogin() + ", password: "
                 + getPassword();
-        System.out.println(information);
         return information;
     }
 

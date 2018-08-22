@@ -14,7 +14,7 @@ class ThirdGenerator implements PasswordGenerator {
     public String generatePassword(int amountOfLetters) {
         String password = "";
         for (int i = 0; i < amountOfLetters; i++) {
-            int index = random.nextInt(4);
+            int index = random.nextInt(2);
             char character = 0;
             switch (index) {
                 case 0:

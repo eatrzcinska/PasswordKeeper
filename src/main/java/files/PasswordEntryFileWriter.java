@@ -20,7 +20,7 @@ class PasswordEntryFileWriter {
 
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(Paths.get(PATH + "\\" + path).toFile(), true);
+            fileWriter = new FileWriter(Paths.get(PATH + "\\" + path).toFile(), false);
         } catch (IOException e) {
             System.out.println("You cannot create a file");
         }
