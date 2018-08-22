@@ -26,7 +26,7 @@ class ThirdGenerator implements PasswordGenerator {
             }
             password += character;
         }
-        System.out.println(password);
+        //System.out.println(password);
         return password;
     }
 

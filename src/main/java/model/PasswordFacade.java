@@ -12,7 +12,8 @@ public class PasswordFacade {
     public PasswordEntry generatePasswordEntry (String website, String login, GeneratorType type, int
             amountOfLetters){
         String password = passwordFacade.getPassword(amountOfLetters, type);
-        PasswordEntry passEntrt = new PasswordEntry(website,password,login);
+        PasswordEntry passEntrt = new PasswordEntry(website,login,password);
+        passEntrt.toString();
         return passEntrt;
     }
 

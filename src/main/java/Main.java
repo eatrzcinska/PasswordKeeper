@@ -1,5 +1,13 @@
+import files.FilesFacade;
+import files.LineFileReader;
 import generator.GeneratorType;
+import generator.PasswordGeneratorFacade;
+import model.PasswordEntry;
 import model.PasswordFacade;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 /*import generator.GeneratorType;
 import generator.PasswordGeneratorFacade;
 import generator.PasswordGeneratorFactory;
@@ -23,14 +31,45 @@ public class Main {
         FirstGenerator gener = new FirstGenerator();
         gener.generatePassword(10);*/
 
-       /* ScannerReader nowy = new ScannerReader();
-        nowy.read("facebook.txt");
-        BufferedFileReader nowy2 = new BufferedFileReader();
+       /*ScannerReader nowy = new ScannerReader();
+        nowy.read("facebook.txt");*/
+        /* BufferedFileReader nowy2 = new BufferedFileReader();
         nowy2.read("facebook.txt");*/
+      /*  LineFileReader nowy = new LineFileReader();
+        try {
+            nowy.read("facebook.txt");
+            System.out.println(nowy.read("facebook.txt").toString());
+        } catch (IOException e) {
+            System.out.println("nie udalo sie uzyc lineFileReadera");
+        }
+*/
+        /*PasswordFacade fasadka = new PasswordFacade();
+        fasadka.generatePasswordEntry("face","emi", GeneratorType.TYPE1,10);*/
+
+        FilesFacade filesFacade = new FilesFacade();
+
+        List<String> listOfStrings = filesFacade.readFile("PasswordKeeper.txt");
+        System.out.println(listOfStrings.toString()); // domyslna metoda chyba
+
+        List<PasswordEntry> listOfObjects = filesFacade.getEntries("PasswordKeeper.txt");
+        listOfObjects.toString();
+
+        List<PasswordEntry> listaRekordow = new ArrayList<>();
+        PasswordFacade ostateczny = new PasswordFacade();
+        PasswordEntry rekord = ostateczny.generatePasswordEntry(
+                "gmail","login@gmail",GeneratorType.TYPE1,10);
+
+        listaRekordow.add(rekord);
+
+        filesFacade.writeToFile("PasswordKeeper.txt",listaRekordow);
 
 
-        PasswordFacade fasadka = new PasswordFacade();
-        fasadka.generatePasswordEntry("face","emi", GeneratorType.TYPE1,10);
+
+
+
+
+
+
     }
 }
 

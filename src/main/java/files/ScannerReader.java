@@ -14,14 +14,15 @@ class ScannerReader extends AbstractFileReader {
     public List read(String path) {
 
         List <String> list = new ArrayList<>();
-        File file = new File(path);
+        File file = getFile(path);
         try {
             Scanner scaner = new Scanner(file);
             while (scaner.hasNextLine()){
             list.add(scaner.nextLine());
-                System.out.println(list.get(0));
+           // System.out.println(list.get(0));
             }
         } catch (FileNotFoundException e) {
+            System.out.println("Nie udało się skorzystać ze skanera");
             return list;
         }
 

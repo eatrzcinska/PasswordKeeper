@@ -8,7 +8,7 @@ public class PasswordEntry {
     String password;
     String login;
 
-    public PasswordEntry(String website, String password, String login){
+    public PasswordEntry(String website, String login, String password){
         this.login=login;
         this.password=password;
         this.website=website;
@@ -24,5 +24,23 @@ public class PasswordEntry {
 
     public String getLogin() {
         return login;
+    }
+
+    @Override
+    public String toString() {
+        String information = "Password Entry: website: " + getWebsite()  + ", login: " + getLogin() + ", password: "
+                + getPassword();
+        System.out.println(information);
+        return information;
+    }
+
+    public String toStringToFile(){
+        String information =getWebsite() + ";" + getLogin() + ";" + getPassword();
+        return information;
+    }
+
+    public String[] toArrayTest(){
+        String[] arrayTest = new String[]{getWebsite(),getLogin(),getPassword()};
+        return arrayTest;
     }
 }
