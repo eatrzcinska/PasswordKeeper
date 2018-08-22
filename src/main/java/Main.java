@@ -4,6 +4,7 @@ import generator.GeneratorType;
 import generator.PasswordGeneratorFacade;
 import model.PasswordEntry;
 import model.PasswordFacade;
+import view.Runner;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class Main {
         /*PasswordFacade fasadka = new PasswordFacade();
         fasadka.generatePasswordEntry("face","emi", GeneratorType.TYPE1,10);*/
 
-        FilesFacade filesFacade = new FilesFacade();
+       /* FilesFacade filesFacade = new FilesFacade();
 
         List<String> listOfStrings = filesFacade.readFile("PasswordKeeper.txt");
         System.out.println(listOfStrings.toString()); // domyslna metoda chyba
@@ -61,13 +62,11 @@ public class Main {
 
         listaRekordow.add(rekord);
 
-        filesFacade.writeToFile("PasswordKeeper.txt",listaRekordow);
+        filesFacade.writeToFile("PasswordKeeper.txt",listaRekordow);*/
 
 
-
-
-
-
+        Runner runner = new Runner();
+        runner.run();
 
 
     }
