@@ -8,7 +8,7 @@ public class PasswordEntry {
     String password;
     String login;
 
-    public PasswordEntry(String website, String password, String login){
+    public PasswordEntry(String website, String login, String password){
         this.login=login;
         this.password=password;
         this.website=website;

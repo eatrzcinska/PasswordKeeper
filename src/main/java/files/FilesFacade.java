@@ -17,7 +17,7 @@ public class FilesFacade {
     // w fasadzie ustalam na sztywno z jakiego readera ma korzystać
 
     public FilesFacade() {
-        filesReader = new LineFileReader();
+        filesReader = new ScannerReader();
         passEntFileWrit = new PasswordEntryFileWriter();
     }
 

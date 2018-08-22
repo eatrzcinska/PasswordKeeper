@@ -53,13 +53,16 @@ public class Main {
         List<PasswordEntry> listOfObjects = fasadka.getEntries("facebook.txt");
         listOfObjects.toString();
 
-        List<PasswordEntry> listaRekordow = new ArrayList<>();
 
-        PasswordEntry nowyRekord = new PasswordEntry("google","haslo","login");
+
+
+      /*  List<PasswordEntry> listaRekordow = new ArrayList<>();
+
+        PasswordEntry nowyRekord = new PasswordEntry("google","login","password");
 
         listaRekordow.add(nowyRekord);
 
-        fasadka.writeToFile("text3.txt",listaRekordow);
+        fasadka.writeToFile("text3.txt",listaRekordow);*/
 
 
     }
